@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import AdminPanelRouter from "./client/routers/AdminPanelRouter";
+import AdminPanelRouter from "./routers/AdminPanelRouter";
 import { ConfigProvider } from "antd";
 
 const router = createBrowserRouter([
