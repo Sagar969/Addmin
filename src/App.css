@@ -1,0 +1,62 @@
+.ant-table-thead th {
+  white-space: nowrap;
+}
+
+.tabsWithStickyBar + .ant-tabs-content-holder {
+  flex: 1;
+}
+.tabsWithStickyBar + .ant-tabs-content-holder .ant-tabs-content-top {
+  height: 100%;
+}
+.tabsWithStickyBar + .ant-tabs-content-holder .ant-tabs-tabpane {
+  height: 100%;
+}
+.ant-tabs:has(.tabsWithStickyBar) {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.client-profile-tabs {
+  height: 100%;
+}
+.client-profile-tabs + .ant-tabs-content-holder {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.client-profile-tabs + .ant-tabs-content-holder .ant-tabs-content-left {
+  flex: 1;
+}
+.client-profile-tabs + .ant-tabs-content-holder .ant-tabs-tabpane {
+  height: 100%;
+}
+.ant-tabs:has(.client-profile-tabs) {
+  height: 100%;
+  display: flex;
+}
+
+.apexcharts-toolbar {
+  z-index: 0;
+  position: static;
+}
+.apexcharts-toolbar * {
+  z-index: 0;
+  position: static;
+}
+
+.stickyBar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  background: linear-gradient(to bottom, hsl(var(--background)), transparent);
+}
+.stickyBarBottom {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  background: linear-gradient(to top, hsl(var(--background)), transparent);
+}

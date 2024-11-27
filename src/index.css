@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  /* background: var(--background) !important; */
+  max-height: 100vh;
+}
+.ant-menu-root {
+  height: 100vh !important;
+}
+
+
+.scrollable-content {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.table-container {
+  overflow: auto;
+  max-height: 80vh;
+  /* Adjust this value to your needs */
+}
+
+html {
+  font-size: 14px !important;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+}
+body {
+  overflow-x: hidden;
+}
+/* Custom Scrollbar for Light Mode */
+.scrollbar {
+  overflow-y: auto;
+  /* height: 100%; */
+}
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--border)); /* Thumb color */
+  border-radius: 8px;
+}
+
+/* Dark Mode Scrollbar */
+.scrollbar::-webkit-scrollbar-track {
+  background-color: transparent; /* Track color */
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(
+    213,
+    29%,
+    87%
+  ); /* Slightly darker than the normal scrollbar */
+}
+
+.dark .scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(
+    215,
+    20.2%,
+    40%
+  ); /* Slightly lighter than the normal scrollbar */
+}
+
+.ant-table-body {
+  scrollbar-width: 8px;
+  scrollbar-color: auto;
+}
+.ant-otp-input{
+  width: 60px;
+  height: 60px;
+  padding: 8px;
+font-size: 20px;
+}
+/* // custom scrollbar */
+.ant-table-body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.ant-table-body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.ant-table-body::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--border)); /* Thumb color */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: hsl(
+    var(--background)
+  ); /* Match this to your background or scrollbar color */
+}
+.ant-table-wrapper .ant-table-pagination.ant-pagination {
+  /* margin: 8px 0 !important; */
+}
+.ant-tabs-nav-wrap {
+  padding-left: 16px;
+}
+
+.ant-layout .ant-layout-sider {
+  background-color: transparent !important;
+}
