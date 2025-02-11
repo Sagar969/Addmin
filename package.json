@@ -1,5 +1,5 @@
 {
-  "name": "wegodigital-saas",
+  "name": "addmin-saas",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "antd": "^5.22.2",
+    "axios": "^1.7.8",
     "clsx": "^2.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
+    "react-query": "^3.39.3",
     "react-router-dom": "^7.0.1",
     "tailwind-merge": "^2.5.5"
   },
@@ -32,5 +34,15 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
     "vite": "^5.4.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sagar969/Addmin.git"
+  },
+  "author": "sagarmavai2002@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sagar969/Addmin/issues"
+  },
+  "homepage": "https://github.com/Sagar969/Addmin#readme"
 }

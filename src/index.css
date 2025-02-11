@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   /* background: var(--background) !important; */
   max-height: 100vh;
@@ -10,7 +9,6 @@ body {
 .ant-menu-root {
   height: 100vh !important;
 }
-
 
 .scrollable-content {
   overflow-y: auto;
@@ -25,7 +23,7 @@ body {
 
 html {
   font-size: 14px !important;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 400;
 }
 body {
@@ -75,11 +73,11 @@ body {
   scrollbar-width: 8px;
   scrollbar-color: auto;
 }
-.ant-otp-input{
+.ant-otp-input {
   width: 60px;
   height: 60px;
   padding: 8px;
-font-size: 20px;
+  font-size: 20px;
 }
 /* // custom scrollbar */
 .ant-table-body::-webkit-scrollbar {
@@ -110,4 +108,28 @@ font-size: 20px;
 
 .ant-layout .ant-layout-sider {
   background-color: transparent !important;
+}
+
+/* Add these styles to your global CSS */
+.drag-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  width: 8px;
+  height: 8px;
+  background: #a8b3c2;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Optional: Add a shadow or glow effect */
+.drag-cursor::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  background: rgba(75, 85, 99, 0.2);
 }

@@ -19,9 +19,10 @@ import {
   useMemo,
   useState,
 } from "react";
-import { cn } from "../../../../lib/utils/cn";
-import { useGlobalContext } from "../../../../contexts/GlobalContext";
-import Loading from "../../../../components/ui/Loading";
+import { cn } from "@/lib/utils/cn";
+import { useGlobalContext } from "@/contexts/GlobalContext";
+import Loading from "@/components/ui/Loading";
+import { useAdminContext } from "../../../../../contexts/AdminContext";
 
 export const TemplateContext = createContext(null);
 
@@ -35,6 +36,7 @@ const getCookie = (name) => {
 };
 
 export function AdminTemplate({ accounts, children }) {
+  const { modules } = useAdminContext();
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [utils, setUtils] = useState({
@@ -120,13 +122,18 @@ export function AdminTemplate({ accounts, children }) {
         icon: <LuLayoutDashboard />,
         label: "Dashboard",
       },
+      ...modules.map((module) => ({
+        key: `/${module.moduleKey}`,
+        icon: null,
+        label: module.moduleName,
+      })),
       {
         key: "/modules",
         icon: <LuHeadphones />,
         label: <WithAddIcon label="Modules" to="/modules/new" />,
       },
     ],
-    [utils.isSidebarCollapsed]
+    [utils.isSidebarCollapsed, modules]
   );
 
   const getKeys = (menuItem) => {
